@@ -1,0 +1,454 @@
+/* -------------------------------------------------------------------------- */
+/*                        Regole per tutti gli schermi                        */
+/* -------------------------------------------------------------------------- */
+
+
+body {
+	font-family: 'Dosis', sans-serif;
+	font-size: 1.4rem;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #ffe100;
+}
+
+
+/* ------------------------------ STILI HEADER ------------------------------ */
+
+#header {
+	background-color: #036bc7;
+	height: 100vh;
+	padding: 0 1rem;
+}
+
+.logo img {
+	padding-top: 1rem;
+	display: block;
+	height: 4rem;
+}
+
+#menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#menu ul {
+	display: none;
+} 
+
+#menu a {
+	font-size: 1.5rem;
+	text-shadow: 2px 2px 2px #00000095;
+}
+
+#hamburger {
+	margin-top: 0.8rem;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+	right: 1rem;
+	top: 1rem;
+}
+
+#hamburger div {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #ffc000;
+
+    transition:0.5s;
+}
+
+#hamburger div:nth-child(2) {
+    top:12px;
+}
+
+#hamburger div:nth-child(3) {
+    top:24px;
+}
+
+#hamburger.open div:first-child {
+    transform:rotate(135deg);
+    top:18px;
+}
+
+#hamburger.open div:nth-child(2) {
+    opacity:0;
+    right:-60px;
+}
+
+#hamburger.open div:nth-child(3) {
+    transform:rotate(-135deg);
+    top:18px;
+} 
+
+.is-mobile #menu {
+    position: fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100%;
+    background:#036bc7;
+    
+}
+
+.is-mobile #menu {
+   flex-direction: column;
+   justify-content: space-evenly;
+}
+
+.is-mobile #menu ul {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+
+
+.is-mobile #menu ul li {
+    padding:1rem 0;
+}
+
+.noscroll {
+	overflow: hidden;
+}
+
+#headerContainer {
+	margin-top: 3rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.textBox {
+	text-align: center;
+}
+
+.textBox, .btn-cta {
+	color: white;
+}
+
+.textBox h1, h2 {
+	font-weight: 300;
+}
+
+.btn-cta {
+	margin-top: 2rem;
+	background-color: #dd5138;
+	border: none;
+	padding: 1rem 2rem;
+	border-radius: 5px;
+}
+
+.btn-cta i {
+	font-size: 1rem;
+}
+
+.rocket {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rocket img {
+	width: 40%;
+}
+
+/* ---------------------------- EVENT DESCRIPTION --------------------------- */
+
+.title {
+	text-align: center;
+	font-size: 1.8rem;
+	margin: 3rem 0;
+}
+
+#main h2 {
+	font-size: 1.7rem;
+}
+
+.eventDescription {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 2rem;
+}
+
+.iconBox i {
+	font-size: 5rem;
+	color: #036bc7;
+}
+
+.iconBox p {
+	padding: 0 1rem;
+}
+
+/* -------------------------------- SPEAKERS -------------------------------- */
+
+.speakersRow {
+	text-align: center;
+}
+
+
+
+#speakers .iconBox {
+	border: 3px solid rgba(211, 211, 211, 0.638);
+	border-radius: 5px;
+	margin: 1rem 0;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+.icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.icons i {
+	font-size: 1.5rem;
+}
+
+/* --------------------------------- OFFERS --------------------------------- */
+
+#offers {
+	background-color: #ffc000;
+	text-align: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+#offers h2 {
+	font-weight: 700;
+}
+
+.offersBox h3 {
+	font-weight: 300;
+}
+
+.price {
+	margin: 0;
+	font-size: 4rem;
+	color: #dd5138;
+}
+
+/* ------------------------------ CONTACT FORM ------------------------------ */
+
+#contactForm {
+	padding: 2rem;
+	background-color: #3a3a3a;
+	color: white;
+	text-align: center;
+}
+
+#contactForm h2 {
+	text-align: center;
+}
+
+#contactForm form {
+	text-align: initial;
+}
+
+#contactForm input, textarea {
+	padding: 0.8rem;
+	border: none;
+	border-radius: 5px;
+}
+
+#contactForm label {
+	margin-bottom: 1rem;
+}
+
+#contactForm i {
+	margin-right: 1rem;
+}
+
+.name, .email, .message {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+
+.message {
+	height: 14rem;
+}
+
+.btnSend {
+	display: flex;
+	justify-content: flex-end;
+}
+.btnSend button {
+background-color:#ffc000;
+	border: none;
+	padding: 0.5rem 0 0.5rem 1rem;
+	border-radius: 5px;
+}
+
+.textContainer span {
+	color: #036bc7;
+}
+
+.textContainer p:nth-child(1), .textContainer p:nth-child(2){
+	border-bottom: 2px solid white;
+	padding-bottom: 2rem;
+}
+
+/* --------------------------------- FOOTER --------------------------------- */
+
+footer {
+	padding: 4rem;
+	background-color: #2a2a2a;
+	text-align: center;
+}
+
+footer p {
+	margin-top: 0;
+	color: white;
+	font-size: medium;
+	margin-bottom: 4rem;
+}
+
+footer ul {
+	display: flex;
+	font-size: small;
+	justify-content: space-between;
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                STILI DESKTOP                               */
+/* -------------------------------------------------------------------------- */
+
+
+@media screen and (min-width:992px) {
+
+	#header {
+		padding: 0 10rem;
+	}
+
+
+
+	.logo img {
+		display: block;
+	}
+
+	#hamburger {
+		display: none;
+	}
+
+	#menu ul {
+		display: flex;
+		gap: 1rem;
+	}
+
+	#menu i {
+		display: none;
+	}
+
+	#headerContainer {
+		margin-top: 9rem;
+		flex-direction: row;
+		align-items: center;
+		gap: 7rem;
+		
+	}
+
+	.textContent {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 5rem;
+	}
+
+	.textBox {
+		font-size: 1.2rem;
+		text-align: initial;
+	}
+
+	.btn-cta {
+		margin-top: 0;
+	}
+
+	.rocket img {
+		width: 100%;
+	}
+
+	/* ---------------------------- EVENT DESCRIPTION --------------------------- */
+
+	.eventDescription {
+		flex-direction: row;
+		margin-bottom: 3rem;
+		padding: 0 8rem;
+	}
+
+	.eventTitle {
+		margin: 5.5rem 0;
+	}
+
+	/* -------------------------------- SPEAKERS -------------------------------- */
+
+	.speakersRow {
+		display: flex;
+	}
+
+	#speakers {
+		padding: 0 8rem;
+	}
+
+	#speakers .iconBox {
+		margin: 1rem;
+	}
+
+	/* --------------------------------- OFFERS --------------------------------- */
+
+	.offers {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	/* ------------------------------ CONTACT FORM ------------------------------ */
+
+	#contactForm {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	#contactForm form {
+		padding-left: 6rem;
+		width: 40%;
+	}
+
+	.twitter {
+		padding: 0 6rem 0 10rem;
+	}
+
+	.twitter h2 {
+		margin-bottom: 4rem;
+	}
+
+	/* --------------------------------- FOOTER --------------------------------- */
+
+	footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	footer ul {
+		gap: 1rem;
+	}
+
+	footer p {
+		margin: 0;
+	}
+
+
+}
